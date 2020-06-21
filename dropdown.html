@@ -1,0 +1,276 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drop dowvn</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        nav{
+            transition: background .2s ease-in  ;
+        }
+       nav.fixed{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: background .2s ease-in  ;
+          
+
+        }
+      nav.fixed{
+            background-color: #545d66;
+        }
+
+        ul li{
+            list-style: none;
+        }
+    
+        nav{
+            background-color:#343a40;
+            height: 60px;
+          
+            display: flex;
+            justify-content:space-around;
+            color: #fff;
+        }
+        .menu {
+            display: flex;
+        }
+        .menu li {
+            transition: background, 0.2s linear;
+            position: relative;
+          line-height: 60px;
+          display: inline-block;
+          height: 60px;
+         padding: 0 20px;
+        }
+        .menu li:hover{
+            background-color:  #007bff;
+         }
+        .logo{
+            line-height: 60px;
+            height: 60px;
+            font-size: 32px;
+            font-weight: 300px;
+            color: #fff;
+            transition: color, 0.2s  ease-in;
+        }
+        .logo:hover{
+            color: #ccc;
+
+        }
+        .dropdown{
+          
+            cursor: pointer;
+            line-height: 60px;
+            height: 60px;
+            display: inline-block;
+        }
+        .menu li>ul{
+            position: absolute;
+            left: 50px;
+            top: 60px;
+            display: flex;
+            flex-direction: column;
+            background-color: #343a40;
+            display: none;
+        }
+        .menu li ul.active{
+            display: block;
+        }
+        .bur{
+            display: none;
+            line-height: 60px;
+            height: 60px;
+            font-size: 34px;
+        }
+        .main p{
+            margin: 0 auto;  
+            width: 300px;
+            height: 200px;
+           
+        }
+        .top{
+            position: fixed;
+            left:20px;
+            bottom: 20px;
+            width: 60px;
+            height: 40px;
+            border: none;
+            outline: none;
+            background-color: #0467d1;
+            font-size: 14px;
+            box-shadow: -5px -6px 56px -15px rgba(0,0,0,0.75);
+            color: #fff;
+            font-weight: 300;
+            border: 1px solid #343a40;
+            border-radius: 20px;
+
+        }
+        li ul li{
+            display: block;
+        }
+
+        @media screen and (max-width: 600px){
+            .bur{
+                display: block;
+                cursor: pointer;
+
+            }
+            nav{
+                position: relative;
+            }
+           
+            .menu{
+               
+                position: absolute;
+                 right:100%;
+                 transition: left, 0.3s linear;
+                top: 60px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 90vh;
+                background-color:  #6c757d;
+                text-align: center;
+                z-index: 1;
+            }
+            .menu.active{
+                right:0%;
+            }
+            .menu li>ul{
+                display: none;
+                position: absolute;
+                left: 75%;
+                top: 55px;
+                z-index: 2;
+
+            }
+            .menu>li>ul>li:hover{
+                background-color: #0467d1;
+            }
+        
+            
+        }
+
+        </style>
+    </head>
+    <body>
+<header>
+    <nav>
+        <div class="logo">
+            MoGo
+        </div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About US</a></li>
+            <li><a href="#">Servis</a>
+               <span class="dropdown"> <i class="fa fa-caret-down"></i></span>
+                <ul class="">
+                    <li><a href="#">Photo</a></li>
+                    <li><a href="#">Video</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="bur">
+            <i class="fa fa-bars"></i>
+        </div>
+
+    </nav>
+
+</header>
+
+<button class="top">top</button>
+
+
+<div class="main">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deleniti eius, incidunt molestiae neque voluptas tenetur non delectus ut, accusamus excepturi magni ducimus optio quos saepe exercitationem eum quod dolor!</p>
+
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" ></script>
+<script>
+const menu =document.querySelector('.menu');   
+ const burg = document.querySelector('.bur');
+ const dropdown = document.querySelector('.dropdown');
+ const btnTop = document.querySelector('.top');
+ let dropdownUl=document.querySelector('.menu li ul');
+ let scroll;
+ let time;
+let header = document.querySelector('nav');
+
+document.addEventListener('scroll', ()=>{
+  if(pageYOffset > 60){
+        header.classList.add('fixed');
+  }else{
+      header.classList.remove('fixed');
+  }
+})
+burg.addEventListener('click', ()=>{
+if(menu.classList.contains('active')){
+   menu.classList.remove('active')
+  
+}else{
+    menu.classList.add('active');
+  
+}
+
+dropdown.addEventListener('click', ()=>{
+dropdownUl.classList.toggle('active')
+    
+})
+
+})
+
+
+
+btnTop.addEventListener('click', event=>{
+   scroll = pageYOffset;
+   changeScroll();
+})
+ function changeScroll(){
+     if(scroll > 0){
+        scrollTo(0, scroll)
+        scroll=scroll-6;
+        time =setTimeout(()=>{
+        changeScroll()
+        }, 6)
+     }else{
+         scrollTo(0, 0)
+         clearTimeout(time)
+     }
+ }
+
+
+
+
+</script>
+        
+    </body>
+    </html>
